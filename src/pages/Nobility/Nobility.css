@@ -1,0 +1,16 @@
+.nobilitySection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  height: 80%;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 50px;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.nobilityUl > li {
+  padding: 10px;
+}
