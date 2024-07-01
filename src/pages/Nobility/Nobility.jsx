@@ -4,30 +4,25 @@ import React from 'react'
 import NobilityRoutes from '../../components/NobilityRoutes/NobilityRoutes'
 
 const Nobility = () => {
+
+  const links = [
+    { to: '/nobility/kings', label: 'Kings' },
+    { to: '/nobility/queens', label: 'Queens' },
+    { to: '/nobility/lords', label: 'Lords' },
+    { to: '/nobility/ladies', label: 'Ladies' },
+  ];
+
   return (
     <>
       <nav>
         <ul className='nobilityUl'>
-          <li>
-            <NavLink to='/nobility/kings' activeClassName='active'>
-              Kings
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/nobility/queens' activeClassName='active'>
-              Queens
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/nobility/lords' activeClassName='active'>
-              Lords
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/nobility/ladies' activeClassName='active'>
-              Ladies
-            </NavLink>
-          </li>
+          {links.map((link, index) => (
+            <li key={index}>
+              <NavLink to={link.to} activeClassName='active'>
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
       <section className='nobilitySection'>

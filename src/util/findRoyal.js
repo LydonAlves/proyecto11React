@@ -1,28 +1,25 @@
-export let kings = []
-export let queens = []
-export let lords = []
-export let ladies = []
-
 export const findRoyals = (characters) => {
-  kings = []
-  queens = []
-  lords = []
-  ladies = []
-  // console.log(characters)
+  const classifiedCharacters = {
+    kings: [],
+    queens: [],
+    lords: [],
+    ladies: [],
+  };
+  // console.log("characters", characters);
+  // console.log("classified", classifiedCharacters);
+
   characters.forEach((character) => {
-    const firstWordTitle = character.title.split(' ')[0].toLowerCase()
+    const firstWordTitle = character.title.split(' ')[0].toLowerCase();
     if (firstWordTitle === 'king') {
-      kings.push(character)
+      classifiedCharacters.kings.push(character);
     } else if (firstWordTitle === 'queen') {
-      queens.push(character)
+      classifiedCharacters.queens.push(character);
     } else if (firstWordTitle === 'lord') {
-      lords.push(character)
+      classifiedCharacters.lords.push(character);
     } else if (firstWordTitle === 'lady') {
-      ladies.push(character)
+      classifiedCharacters.ladies.push(character);
     }
-  })
-  // console.log(kings)
-  // console.log(queens)
-  // console.log(lords)
-  // console.log(ladies)
-}
+  });
+
+  return classifiedCharacters;
+};

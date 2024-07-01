@@ -8,12 +8,12 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to='/' activeClassName='active'>
+            <NavLink to='/' activeclassname='active'>
               All Characters
             </NavLink>
           </li>
           <li>
-            <NavLink to='/nobility' activeClassName='active'>
+            <NavLink to='/nobility' activeclassname='active'>
               Nobility
             </NavLink>
           </li>
